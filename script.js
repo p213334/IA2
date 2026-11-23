@@ -15,6 +15,7 @@ let perguntaAtual;
 let historiaFinal = "";
 
 botaoIniciar.addEventListener('click', iniciaJogo);
+botaoJogarNovamente.addEventListener("click", jogaNovamente);
 
 function iniciaJogo() {
     atual = 0;
@@ -65,12 +66,12 @@ function mostraResultado() {
     textoResultado.textContent = historiaFinal;
     caixaAlternativas.textContent = "";
     caixaResultado.classList.add("mostrar");
-    botaoJogarNovamente.addEventListener("click", jogaNovamente);
 }
 
 function jogaNovamente() {
     atual = 0;
     historiaFinal = "";
+    caixaPerguntas.textContent = "";
     caixaResultado.classList.remove("mostrar");
     telaInicial.style.display = 'block';
 }
